@@ -1,0 +1,52 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">Budżet domowy</string>
+
+    <!-- LOGIN -->
+    <string name="sign_in_info">Используйте учетную запись Google, через которую у вас есть доступ к листу вашего семейного бюджета в Google Docs.</string>
+    <string name="sign_in_error">Произошла ошибка при входе в систему</string>
+    <string name="privacy_policy">Ознакомиться с <![CDATA[<b><a href="https://docs.google.com/document/d/1vs5tYH70oarsbm7EOnz5Rle43alCRjuJJAlB9IGi5Fs">Пользовательским соглашением"</a></b>]]></string>
+
+    <!-- PICKER -->
+    <string name="enter_spreadsheet_url">Введите ссылку на таблицу семейного бюджета Google Docs:</string>
+    <string name="spreadsheet_url_hint">Ссылка до таблицы</string>
+    <string name="connect_spreadsheet">Соедините лист</string>
+    <string name="create_spreadsheet">Как создать собственную копию листа?</string>
+    <string name="spreadsheet_template">Шаблон таблицы:</string>
+    <string-array name="templates_array">
+        <item>2021/2022</item>
+        <item>2020</item>
+        <item>2019</item>
+    </string-array>
+
+    <!-- MAIN -->
+    <string name="incomes">Поступления</string>
+    <string name="expenses">Траты</string>
+    <string name="total">Итого</string>
+    <string name="of">z %s</string>
+    <string name="percent">%d%%</string>
+    <string name="load_error_title">Произошла ошибка</string>
+    <string name="load_error_message">Не удалось получить данные бюджета из выбранного рабочего листа. Убедитесь, что вы выбрали правильную версию шаблона.</string>
+    <string name="try_again">Попробуйте еще раз</string>
+    <string name="add_transaction">Добавить транзакцию</string>
+    <string name="transaction_added_message">Транзакция успешно добавлена ​​в ваш бюджет.</string>
+    <string name="pick_document">Лист изменений</string>
+    <string name="about_app">О приложении</string>
+    <string name="sign_out">Выйти из приложения</string>
+    <string name="old_financial_year_warning">Выбранный лист относится к году %s. Свяжите приложение с новым листом за текущий год, выбрав \"Связать лист\" в меню.</string>
+
+    <!-- TRANSACTION -->
+    <string name="new_transaction">Новая транзакция</string>
+    <string name="calculator">Калькулятор</string>
+    <string name="add">Добавить</string>
+    <string name="note_hint">Дополнительная информация</string>
+    <string name="amount_hint">0,00</string>
+    <string name="currency">rub</string>
+    <string name="add_transaction_error_message">Не удалось добавить транзакцию в бюджет</string>
+
+    <!-- ABOUT -->
+    <string name="version">Версия</string>
+    <string name="author" tools:ignore="Typos">Автор</string>
+    <string name="me">Paweł Gajda</string>
+    <string name="app_icon">Иконка приложения</string>
+    <string name="app_icon_author"><![CDATA[<b><a href="https://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a>]]></string>
+</resources>
