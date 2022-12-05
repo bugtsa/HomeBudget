@@ -2,3 +2,4 @@
 client_id.json
 /.kotlintest
 /google-services.json
+/release/output-metadata.json
