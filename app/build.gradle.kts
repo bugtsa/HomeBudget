@@ -95,8 +95,10 @@ dependencies {
     implementation("com.github.raquezha:InlineActivityResult:1.0.0-jitpack")
     implementation("com.jakewharton.threetenabp:threetenabp:1.2.1")
     implementation("com.sasank.roundedhorizontalprogress:roundedhorizontalprogress:1.0.1")
-    implementation("com.google.firebase:firebase-crashlytics:18.2.12")
-    implementation("com.google.firebase:firebase-analytics:21.1.0")
+    implementation("com.google.firebase:firebase-crashlytics:18.3.2")
+    implementation("com.google.firebase:firebase-analytics:21.2.0")
+    implementation("com.google.firebase:firebase-auth:21.1.0")
+
     implementation("com.louiscad.splitties:splitties-fun-pack-android-material-components-with-views-dsl:3.0.0")
     implementation("com.louiscad.splitties:splitties-alertdialog-appcompat:3.0.0")
     implementation("com.maltaisn:calcdialog:2.2.1")

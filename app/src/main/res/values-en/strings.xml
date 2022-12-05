@@ -26,7 +26,7 @@
     <string name="percent">%d%%</string>
     <string name="load_error_title">Error occured</string>
     <string name="load_error_message">Failed to fetch budget data from the selected worksheet. Make sure you have selected the correct version of the template.</string>
-    <string name="try_again">Try againg</string>
+    <string name="try_again">Try again</string>
     <string name="add_transaction">Add transaction</string>
     <string name="transaction_added_message">The transaction has been successfully added to your budget.</string>
     <string name="pick_document">Sheet changes</string>
