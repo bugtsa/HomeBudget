@@ -60,6 +60,7 @@ suspend fun MainLogic(
                         NavGraph.Args.monthlyBudget to monthlyBudget.value
                     )
                 }
+                Currencies -> navigator.navigate(NavGraph.Action.toCurrencies)
                 PickDocumentAgain -> navigator.navigate(NavGraph.Action.toPicker)
                 SelectAbout -> navigator.navigate(NavGraph.Action.toAbout)
                 SignOut -> {
@@ -122,6 +123,7 @@ sealed class MainAction {
     object SelectNextMonth : MainAction()
     object TryAgain : MainAction()
     object AddTransaction : MainAction()
+    object Currencies : MainAction()
     object PickDocumentAgain : MainAction()
     object SelectAbout : MainAction()
     object SignOut : MainAction()

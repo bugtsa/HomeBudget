@@ -40,10 +40,15 @@
     <string name="add">Add</string>
     <string name="note_hint">Additional info</string>
     <string name="amount_hint">0,00</string>
-    <string name="currency">zł</string>
     <string name="add_transaction_error_message">Failed to add transaction to budget.</string>
     <string name="calc_dialog_clear">Clear</string>
     <string name="calc_dialog_erase">Clear</string>
+
+    <!-- CURRENCY -->
+    <string name="currency">zł</string>
+    <string name="currencies">Currencies</string>
+    <string name="default_currency">Default currency: %s</string>
+    <string name="default_exchange_to_currency">Exchange to currency: %s</string>
 
     <!-- ABOUT -->
     <string name="version">Version</string>

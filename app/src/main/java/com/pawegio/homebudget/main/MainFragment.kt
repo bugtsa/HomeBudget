@@ -82,6 +82,7 @@ class MainFragment : Fragment() {
             setOnMenuItemClickListener { item: MenuItem ->
                 when (item.itemId) {
                     R.id.action_add_transaction -> tryToAddTransaction()
+                    R.id.action_default_currency -> viewModel.actions.accept(MainAction.Currencies)
                     R.id.action_pick_document -> viewModel.actions.accept(MainAction.PickDocumentAgain)
                     R.id.action_about -> viewModel.actions.accept(MainAction.SelectAbout)
                     R.id.action_sign_out -> viewModel.actions.accept(MainAction.SignOut)

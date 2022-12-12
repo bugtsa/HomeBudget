@@ -40,10 +40,21 @@
     <string name="add">Dodaj</string>
     <string name="note_hint">Dodaj notatkę</string>
     <string name="amount_hint">0,00</string>
-    <string name="currency">zł</string>
     <string name="add_transaction_error_message">Nie udało się dodać transakcji do budżetu.</string>
     <string name="calc_dialog_clear">Wymaż</string>
     <string name="calc_dialog_erase">Wymaż</string>
+
+    <!-- CURRENCY -->
+    <string name="currency">zł</string>
+    <string-array name="currencies_array">
+        <item>usd</item>
+        <item>rub</item>
+        <item>kzt</item>
+        <item>zł</item>
+    </string-array>
+    <string name="currencies">Валюты</string>
+    <string name="default_currency">Валюта по умолчанию: %s</string>
+    <string name="default_exchange_to_currency">Обмен в валюту: %s</string>
 
     <!-- ABOUT -->
     <string name="version">Wersja</string>

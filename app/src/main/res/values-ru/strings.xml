@@ -40,10 +40,15 @@
     <string name="add">Добавить</string>
     <string name="note_hint">Дополнительная информация</string>
     <string name="amount_hint">0,00</string>
-    <string name="currency">rub</string>
     <string name="add_transaction_error_message">Не удалось добавить транзакцию в бюджет</string>
     <string name="calc_dialog_clear">Очистить</string>
     <string name="calc_dialog_erase">Очистить</string>
+
+    <!-- CURRENCY -->
+    <string name="currency">rub</string>
+    <string name="currencies">Валюты</string>
+    <string name="default_currency">Валюта по умолчанию: %s</string>
+    <string name="default_exchange_to_currency">Обмен в валюту: %s</string>
 
     <!-- ABOUT -->
     <string name="version">Версия</string>

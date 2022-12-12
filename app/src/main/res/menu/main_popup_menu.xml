@@ -4,6 +4,9 @@
         android:id="@+id/action_add_transaction"
         android:title="@string/add_transaction" />
     <item
+        android:id="@+id/action_default_currency"
+        android:title="@string/currencies" />
+    <item
         android:id="@+id/action_pick_document"
         android:title="@string/pick_document" />
     <item
