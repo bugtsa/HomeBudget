@@ -8,7 +8,6 @@ import android.text.method.DigitsKeyListener
 import android.util.AttributeSet
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.FrameLayout
 import android.widget.ProgressBar
@@ -90,6 +89,7 @@ class TransactionUi(override val ctx: Context) : Ui {
     private val amountChangesRelay = PublishRelay.create<Optional<BigDecimal>>()
     private val amountClicksRelay = PublishRelay.create<Unit>()
     private val addClicksRelay = PublishRelay.create<Unit>()
+    private val exchangeCurrencyRelay = PublishRelay.create<Unit>()
 
     val backClicks: Observable<Unit> = backClicksRelay
     val noteChanges: Observable<Optional<String>> = noteChangesRelay
@@ -99,6 +99,7 @@ class TransactionUi(override val ctx: Context) : Ui {
     val amountChanges: Observable<Optional<BigDecimal>> = amountChangesRelay
     val amountClicks: Observable<Unit> = amountClicksRelay
     val addClicks: Observable<Unit> = addClicksRelay
+    val exchangeClick: Observable<Unit> = exchangeCurrencyRelay
 
     private val materialStyles = MaterialComponentsStyles(ctx)
 
@@ -206,6 +207,16 @@ class TransactionUi(override val ctx: Context) : Ui {
         editorActions { it == EditorInfo.IME_ACTION_DONE }
             .map { }
             .subscribe(addClicksRelay)
+        clicks()
+            .subscribe(exchangeCurrencyRelay)
+    }
+
+    private val exchangeButton = imageView {
+        imageResource = R.drawable.ic_exchange
+        setColorFilter(colorAttr(R.attr.colorOnPrimary))
+        padding = dip(8)
+        clicks()
+            .subscribe(exchangeCurrencyRelay)
     }
 
     private val calculatorButton = materialStyles.button.text {
@@ -284,11 +295,17 @@ class TransactionUi(override val ctx: Context) : Ui {
         })
         add(currencyTextView, lParams(wrapContent, wrapContent) {
             alignVerticallyOn(amountImageView)
+            startToEndOf(amountEditText, dip(8))
+            endToStartOf(exchangeButton)
+        })
+        add(exchangeButton, lParams(wrapContent, wrapContent) {
+            alignVerticallyOn(amountImageView)
+            startToEndOf(currencyTextView, dip(4))
             endOfParent(dip(16))
         })
         add(calculatorButton, lParams(matchConstraints, wrapContent) {
             topToBottomOf(amountEditText)
-            endToEndOf(amountEditText)
+            endToEndOf(exchangeButton)
         })
         add(addButton, lParams(matchConstraints, dip(52)) {
             centerHorizontally(dip(16))

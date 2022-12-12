@@ -15,6 +15,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 import org.threeten.bp.LocalDate
 import java.math.BigDecimal
+import java.math.RoundingMode
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 
@@ -54,6 +55,13 @@ class TransactionFragment : Fragment(), CalcDialog.CalcDialogCallback {
         ).subscribe(viewModel.transactionActions)
         ui.dateClicks.subscribe(::showDatePicker)
         ui.amountClicks.subscribe { showCalcDialog() }
+        ui.exchangeClick.subscribe {
+            ui.amount?.also { amount ->
+                val course = BigDecimal(KZT_TO_RUB_RATE)
+                val result = amount.divide(course, 2, RoundingMode.HALF_UP);
+                ui.amount = result
+            }
+        }
     }
 
     private fun showDatePicker(date: LocalDate?) {
@@ -107,3 +115,4 @@ class TransactionFragment : Fragment(), CalcDialog.CalcDialogCallback {
 }
 
 private const val CALC_DIALOG_REQUEST_CODE = 759
+private const val KZT_TO_RUB_RATE = "7.2"
